@@ -21,7 +21,7 @@ function popUpRandomMole() {
   clickable = true;
 
   // UNCOMMENT THIS LINE OF CODE WHEN DIRECTED
-  // moleHead.classList.remove('wgs__mole-head--hidden', 'wgs__mole-head--whacked');
+  moleHead.classList.remove('wgs__mole-head--hidden', 'wgs__mole-head--whacked');
 
   molesLeft -= 1;
   document.querySelector('.sb__moles').innerHTML = molesLeft;
@@ -52,11 +52,27 @@ window.addEventListener('DOMContentLoaded', () => {
       hideMole(event.target);
 
       // UNCOMMENT THIS LINE OF CODE WHEN DIRECTED
-      // event.target.classList.add('wgs__mole-head--hidden');
+      event.target.classList.add('wgs__mole-head--hidden');
 
       // UNCOMMENT THIS LINE OF CODE WHEN DIRECTED FOR THE BONUS
-      // event.target.classList.add('wgs__mole-head--whacked');
+      event.target.classList.add('wgs__mole-head--whacked');
     });
   }
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+        var container = document.getElementById('container');
+        var hammer = document.getElementById('hammer');
+
+        container.addEventListener('mousemove', function(e) {
+            var x = e.clientX - hammer.width / 2; // Center the image under the pointer
+            var y = e.clientY - hammer.height / 2;
+
+            // Constrain the image within the container boundaries
+            var constrainedX = Math.min(Math.max(0, x), container.offsetWidth - hammer.width);
+            var constrainedY = Math.min(Math.max(0, y), container.offsetHeight - hammer.height);
+
+            hammer.style.left = constrainedX + "px";
+            hammer.style.top = constrainedY + "px";
+        });
+    });
