@@ -1,7 +1,24 @@
 /* Your code here */
+.wgs{
+  /* width: 640px;
+  height:482px;
+  background-color: red;
+  display: flex-block; */
+  display: inline-block;
+}
+.wgs__mole-head{
+  /* display: inline-block; */
+  position: absolute;
+  left: 109px;
+}
+.wgs__dirt-pile{
+  /* display: inline-block; */
+  position: absolute;
+  top: 262px;
+  bottom: 0px;
+  left: 0px;
 
-
-
+}
 /* UNCOMMENT THE CODE BELOW WHEN DIRECTED */
 /* .sb {
   background-color: cornflowerblue;
