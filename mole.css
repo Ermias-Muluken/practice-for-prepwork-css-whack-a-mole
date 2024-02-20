@@ -1,22 +1,29 @@
 /* Your code here */
+.pf{
+  display: grid;
+  grid-template: 50%/repeat(4,25%)
+}
 .wgs{
   display: inline-block;
   position: relative;
-  width: 640px;
-  height: 482px;
+  width: 320px;
+  height: 241px;
   overflow: hidden;
 }
 .wgs__mole-head{
+  width: 188px;
   position: absolute;
-  left: 109px;
+  left: 54.5px;
 }
 .wgs__mole-head--hidden{
   transition: margin-top 0.25s;
-  margin-top: 482px;
+  margin-top: 241px;
 }
 .wgs__dirt-pile{
+  width: 320px;
+  height: 110px;
   position: absolute;
-  top: 262px;
+  top: 131px;
   bottom: 0px;
   left: 0px;
 
