@@ -12,6 +12,7 @@ function popUpRandomMole() {
 
   const moleHeads = document.querySelectorAll('.wgs__mole-head');
 
+
   if (moleHeads.length === 0) {
     return;
   }
@@ -38,7 +39,7 @@ function hideMole(mole) {
 
 window.addEventListener('DOMContentLoaded', () => {
   setTimeout(popUpRandomMole, 0);
-
+  var hammer = document.getElementById('hammer');
   const moleHeads = document.querySelectorAll('.wgs__mole-head');
   for (let moleHead of moleHeads) {
     moleHead.addEventListener('click', event => {

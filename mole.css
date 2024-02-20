@@ -1,16 +1,15 @@
 /* Your code here */
 #hammer{
-  width: 80px;
-  height: 80px;
-  /* display: none; */
+  width: 120px;
+  height: 120px;
+  /*border-radius: 50%; */
   position: absolute;
   pointer-events: none;
-  /* left: 50px;
-  top: 50px; */
+  /* background-color: red; */
 
 }
 #container{
-  background-color: brown;
+  background-image: url("backg.jpg");
   overflow: hidden;
   cursor: none;
 }
@@ -37,6 +36,23 @@
   transition: margin-top 0.25s;
   margin-top: 241px;
 }
+@keyframes anime{
+  0%{
+    margin: auto;
+    width: 400px;
+    height: 400px;
+
+  }
+  100%{
+    width: 50px;
+    height: 50px;
+
+  }
+}
+.wgs__mole-head--whacked{
+  content: url("ghost.png");
+  animation: anime 1s;
+}
 .wgs__dirt-pile{
   width: 320px;
   height: 110px;
@@ -48,9 +64,9 @@
 }
 /* UNCOMMENT THE CODE BELOW WHEN DIRECTED */
 .sb {
-  background-color: cornflowerblue;
-  border-bottom: 1px solid #645DED;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  background-color: rgb(128, 0, 0);
+  border-bottom: 2px solid rgb(21, 253, 79);
+  box-shadow: 0 2px 4px #3509f866;
   color: white;
   display: flex;
   font-size: 30px;
